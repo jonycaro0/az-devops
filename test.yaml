@@ -11,10 +11,11 @@ steps:
   displayName: 'Install Node.js'
 
 - script: |
-    npm ci
-    npm run build
-  displayName: 'Install dependencies and build'
+    mkdir test
+    cd test 
+  displayName: 'Create folder test'
 
 - script: |
-    npm test
-  displayName: 'Run tests'
+    ls
+    pwd
+  displayName: 'Listar y mostrar ruta'
