@@ -1,0 +1,26 @@
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- main
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+- script: echo Hello, world!
+  displayName: 'Run a one-line script'
+
+- script: |
+    echo Add other tasks to build, test, and deploy your project.
+    echo See https://aka.ms/yaml
+    mkdir test
+  displayName: 'Run a multi-line script'
+
+- task: AzureCLI@2
+  inputs:
+    azureSubscription: 'Azure subscription 1 (2a9aaffe-c2e6-4cdd-ae1e-69763ee7c082)'
+    scriptType: 'ps'
+    scriptLocation: 'inlineScript'
+    inlineScript: 'ls'
