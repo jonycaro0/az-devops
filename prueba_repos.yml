@@ -30,10 +30,19 @@ steps:
   displayName: 'Run a multi-line script'
 
 
+# - task: AzureCLI@2
+#   inputs:
+#     azureSubscription: 'Azure subscription 1 (2a9aaffe-c2e6-4cdd-ae1e-69763ee7c082)'
+#     scriptType: 'bash'
+#     scriptLocation: 'inlineScript'
+#     inlineScript: 'az login --service-principal --username 5f5f9336-dfce-46cc-8acd-81e6eb9c8a8e --password bie8Q~vS2h9JsgbZbmFKoTOsqcXInf_xND2BIaTj --tenant f524efae-c921-4e8b-851e-b002089d974d'
+#     useGlobalConfig: true
+
 - task: AzureCLI@2
   inputs:
     azureSubscription: 'Azure subscription 1 (2a9aaffe-c2e6-4cdd-ae1e-69763ee7c082)'
     scriptType: 'bash'
-    scriptLocation: 'inlineScript'
-    inlineScript: 'az login --service-principal --username 5f5f9336-dfce-46cc-8acd-81e6eb9c8a8e --password bie8Q~vS2h9JsgbZbmFKoTOsqcXInf_xND2BIaTj --tenant f524efae-c921-4e8b-851e-b002089d974d'
+    scriptLocation: 'scriptPath'
+    scriptPath: './script.sh'
+    addSpnToEnvironment: true
     useGlobalConfig: true
