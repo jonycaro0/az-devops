@@ -8,27 +8,6 @@ trigger:
 pool:
   vmImage: ubuntu-latest
 
-variables:
-- group: Credenciales_Service_Principal
-# - name: PASSWORD
-#   value: $[variables.PASSWORD]
-# - name: PASSWORD
-# value: $[variables.PASSWORD]
-# - name: PASSWORD
-# value: $[variables.PASSWORD]
-
-
-steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
-
-- script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
-    mkdir test
-    ls -la
-  displayName: 'Run a multi-line script'
-
 
 # - task: AzureCLI@2
 #   inputs:
@@ -44,5 +23,4 @@ steps:
     scriptType: 'bash'
     scriptLocation: 'scriptPath'
     scriptPath: './script.sh'
-    addSpnToEnvironment: true
     useGlobalConfig: true
