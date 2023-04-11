@@ -11,6 +11,8 @@ pool:
 steps:
 - script: echo Hello, world!
   displayName: 'Run a one-line script'
+- script: ls
+  displayName: 'List'
 
 
 # - task: AzureCLI@2
