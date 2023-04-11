@@ -13,7 +13,7 @@ steps:
   displayName: 'Run a one-line script'
 - script: ls
   displayName: 'List'
-- script: az upgrade
+- script: az upgrade --yes
   displayName: 'Update az-cli'
 # - script: az config set extension.use_dynamic_install=yes_without_prompt
 #   displayName: 'Allow extensions'
