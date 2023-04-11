@@ -8,6 +8,16 @@ trigger:
 pool:
   vmImage: ubuntu-latest
 
+variables:
+- group: Credenciales_Service_Principal
+# - name: PASSWORD
+#   value: $[variables.PASSWORD]
+# - name: PASSWORD
+# value: $[variables.PASSWORD]
+# - name: PASSWORD
+# value: $[variables.PASSWORD]
+
+
 steps:
 - script: echo Hello, world!
   displayName: 'Run a one-line script'
