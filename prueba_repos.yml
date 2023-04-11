@@ -13,6 +13,10 @@ steps:
   displayName: 'Run a one-line script'
 - script: ls
   displayName: 'List'
+- script: az config set extension.use_dynamic_install=yes_without_prompt
+  displayName: 'Allow extensions'
+- script: echo $(System.AccessToken) | az devops login
+  displayName: 'Login to DevOps'
 
 
 # - task: AzureCLI@2
